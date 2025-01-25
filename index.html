@@ -70,28 +70,22 @@
     </div>
 
     <script>
-      // Menangkap form dan input
       const loginForm = document.getElementById("loginForm");
       const errorMessage = document.getElementById("errorMessage");
 
-      // Menambahkan event listener untuk validasi login
       loginForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Mencegah form submit secara default
+        event.preventDefault(); 
 
-        // Data username dan password yang valid
         const validUsername = "jovan";
         const validPassword = "jovan123";
 
-        // Ambil nilai input dari form
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
 
-        // Cek validasi username dan password
         if (username === validUsername && password === validPassword) {
-          alert("Login berhasil!"); // Pesan sukses
-          window.location.href = "home.html"; // Redirect ke halaman dashboard
+          alert("Login berhasil!"); 
+          window.location.href = "home.html";
         } else {
-          // Tampilkan pesan error
           errorMessage.style.display = "block";
         }
       });
